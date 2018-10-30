@@ -45,3 +45,24 @@ def draw_hangman(num_wrong_guesses):
         output = output + "\n |"
     output = output + "____\n\n"
     print(output)
+
+#check a guess to see if it is correct.
+
+#allow user to input guesses
+name = input(" What is your name? ")
+print ("Hello",name, "its time to play some hangman !")
+wrong_guesses = 0
+incorrect = 0
+draw_hangman(incorrect)
+
+word = "test"
+while wrong_guesses < num_wrong_guesses_allowed :
+    user_guess= input( "What is your guess?")
+    if str.lower(user_guess) in word:
+             print ("correct")
+    else:
+            print ("Incorrect")
+            wrong_guesses = wrong_guesses + 1
+            incorrect = incorrect + 1
+
+
